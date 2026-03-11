@@ -1,0 +1,8 @@
+Writing Sample Placeholder
+
+Replace this file with an article, paper, presentation, or portfolio sample that you want visitors to open directly from the site.
+
+Possible replacements:
+- essay.pdf
+- research-note.pdf
+- talk-slides.pdf

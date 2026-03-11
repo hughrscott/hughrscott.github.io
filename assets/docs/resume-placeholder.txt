@@ -1,0 +1,13 @@
+Resume Placeholder
+
+Replace this file with your actual resume PDF or another downloadable document.
+
+Suggested filename:
+- hugh-scott-resume.pdf
+
+Suggested contents:
+- Short profile
+- Experience
+- Education
+- Selected projects
+- Contact links

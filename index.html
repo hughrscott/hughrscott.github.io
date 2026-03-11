@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hugh Scott</title>
+    <meta
+      name="description"
+      content="Hugh Scott is a technology strategist and operator working at the intersection of AI, energy systems, and critical infrastructure."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero frame">
+        <div class="hero-copy">
+          <p class="eyebrow">Technology, infrastructure, and applied intelligence</p>
+          <h1 id="name"></h1>
+          <p class="title" id="title"></p>
+          <p class="bio" id="bio"></p>
+        </div>
+        <figure class="portrait-card">
+          <img id="portrait" alt="" />
+        </figure>
+      </header>
+
+      <main class="content-grid">
+        <div class="main-column">
+          <section class="panel frame" aria-labelledby="resume-heading">
+            <div class="panel-header">
+              <p class="section-kicker">Resume</p>
+              <h2 id="resume-heading">Brief Resume</h2>
+            </div>
+            <p class="summary" id="resume-summary"></p>
+            <div id="resume-groups" class="resume-groups"></div>
+          </section>
+
+          <section class="panel frame" aria-labelledby="thinking-heading">
+            <div class="panel-header">
+              <p class="section-kicker">Current Focus</p>
+              <h2 id="thinking-heading">What I’m Thinking About</h2>
+            </div>
+            <ul id="thinking-list" class="topic-list"></ul>
+          </section>
+
+          <section class="panel frame" aria-labelledby="writing-heading">
+            <div class="panel-header">
+              <p class="section-kicker">Writing</p>
+              <h2 id="writing-heading">Essays and Notes</h2>
+            </div>
+            <p class="summary" id="writing-summary"></p>
+            <div id="writing-list" class="article-list"></div>
+          </section>
+
+          <section class="panel frame" aria-labelledby="projects-heading">
+            <div class="panel-header">
+              <p class="section-kicker">Lab</p>
+              <h2 id="projects-heading">Projects</h2>
+            </div>
+            <p class="summary" id="projects-summary"></p>
+            <ul id="projects-list" class="topic-list"></ul>
+            <p class="github-note" id="projects-link"></p>
+          </section>
+        </div>
+
+        <aside class="side-column">
+          <section class="panel frame" aria-labelledby="links-heading">
+            <div class="panel-header">
+              <p class="section-kicker">Connections</p>
+              <h2 id="links-heading">Links and Documents</h2>
+            </div>
+
+            <section class="subsection" aria-labelledby="documents-heading">
+              <h3 id="documents-heading">Documents</h3>
+              <ul id="documents-list" class="resource-list"></ul>
+            </section>
+
+            <section class="subsection" aria-labelledby="profiles-heading">
+              <h3 id="profiles-heading">Profiles</h3>
+              <ul id="links-list" class="resource-list"></ul>
+            </section>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

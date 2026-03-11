@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-labelledby="title desc">
+  <title id="title">Portrait placeholder</title>
+  <desc id="desc">A simple abstract portrait placeholder for a personal website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#edf2f8" />
+      <stop offset="100%" stop-color="#d8e1ee" />
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" rx="28" fill="url(#bg)" />
+  <path
+    d="M126 490c8-94 55-140 114-140s106 46 114 140"
+    fill="#9eb2cd"
+  />
+  <circle cx="240" cy="219" r="92" fill="#c5d2e3" />
+  <path
+    d="M163 222c24-84 167-79 154 6-4 28-20 49-31 59-12-20-24-31-48-31-28 0-46 14-58 35-13-13-25-38-17-69z"
+    fill="#5a7094"
+  />
+  <path
+    d="M146 520h188"
+    fill="none"
+    stroke="#244a7a"
+    stroke-linecap="round"
+    stroke-width="10"
+  />
+  <path
+    d="M112 82c45-22 90-31 134-29 51 2 98 16 140 43"
+    fill="none"
+    stroke="#244a7a"
+    stroke-linecap="round"
+    stroke-width="6"
+    opacity="0.6"
+  />
+</svg>
