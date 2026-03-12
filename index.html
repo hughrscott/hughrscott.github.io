@@ -6,81 +6,74 @@
     <title>Hugh Scott</title>
     <meta
       name="description"
-      content="Hugh Scott is a technology strategist and operator working at the intersection of AI, energy systems, and critical infrastructure."
+      content="Hugh Scott is a technology strategist and operator working at the intersection of AI, software, and critical infrastructure."
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="hero frame">
-        <div class="hero-copy">
-          <p class="eyebrow">Technology, infrastructure, and applied intelligence</p>
-          <h1 id="name"></h1>
-          <p class="title" id="title"></p>
-          <p class="bio" id="bio"></p>
-        </div>
-        <figure class="portrait-card">
-          <img id="portrait" alt="" />
-        </figure>
-      </header>
+    <div class="site-shell">
+      <main class="site-main">
+        <section class="hero" aria-labelledby="name">
+          <div class="hero-copy">
+            <h1 id="name"></h1>
+            <p class="hero-headline" id="title"></p>
+            <div id="hero-body" class="prose"></div>
+          </div>
+          <figure class="hero-image">
+            <img id="portrait" alt="" />
+          </figure>
+        </section>
 
-      <main class="content-grid">
-        <div class="main-column">
-          <section class="panel frame" aria-labelledby="resume-heading">
-            <div class="panel-header">
-              <p class="section-kicker">Resume</p>
-              <h2 id="resume-heading">Brief Resume</h2>
-            </div>
-            <p class="summary" id="resume-summary"></p>
-            <div id="resume-groups" class="resume-groups"></div>
-          </section>
+        <section class="section" aria-labelledby="about-heading">
+          <div class="section-heading">
+            <p class="section-kicker">About</p>
+            <h2 id="about-heading">About</h2>
+          </div>
+          <div id="about-body" class="prose"></div>
+        </section>
 
-          <section class="panel frame" aria-labelledby="thinking-heading">
-            <div class="panel-header">
-              <p class="section-kicker">Current Focus</p>
-              <h2 id="thinking-heading">What I’m Thinking About</h2>
-            </div>
-            <ul id="thinking-list" class="topic-list"></ul>
-          </section>
+        <section class="section" aria-labelledby="experience-heading">
+          <div class="section-heading">
+            <p class="section-kicker">Selected Experience</p>
+            <h2 id="experience-heading">Selected Experience</h2>
+          </div>
+          <div id="experience-list" class="experience-list"></div>
+          <p class="section-link" id="experience-link"></p>
+        </section>
 
-          <section class="panel frame" aria-labelledby="writing-heading">
-            <div class="panel-header">
-              <p class="section-kicker">Writing</p>
-              <h2 id="writing-heading">Essays and Notes</h2>
-            </div>
-            <p class="summary" id="writing-summary"></p>
-            <div id="writing-list" class="article-list"></div>
-          </section>
+        <section class="section" aria-labelledby="writing-heading">
+          <div class="section-heading">
+            <p class="section-kicker">Writing</p>
+            <h2 id="writing-heading">Writing</h2>
+          </div>
+          <div id="writing-body" class="prose"></div>
+          <div id="writing-list" class="writing-grid"></div>
+        </section>
 
-          <section class="panel frame" aria-labelledby="projects-heading">
-            <div class="panel-header">
-              <p class="section-kicker">Lab</p>
-              <h2 id="projects-heading">Projects</h2>
-            </div>
-            <p class="summary" id="projects-summary"></p>
-            <ul id="projects-list" class="topic-list"></ul>
-            <p class="github-note" id="projects-link"></p>
-          </section>
-        </div>
+        <section class="section" aria-labelledby="interests-heading">
+          <div class="section-heading">
+            <p class="section-kicker">Current Interests</p>
+            <h2 id="interests-heading">Current Interests</h2>
+          </div>
+          <ul id="interests-list" class="bullet-list"></ul>
+        </section>
 
-        <aside class="side-column">
-          <section class="panel frame" aria-labelledby="links-heading">
-            <div class="panel-header">
-              <p class="section-kicker">Connections</p>
-              <h2 id="links-heading">Links and Documents</h2>
-            </div>
+        <section class="section" aria-labelledby="projects-heading">
+          <div class="section-heading">
+            <p class="section-kicker">Projects / Lab</p>
+            <h2 id="projects-heading">Projects / Lab</h2>
+          </div>
+          <div id="projects-body" class="prose"></div>
+          <p class="section-link" id="projects-link"></p>
+        </section>
 
-            <section class="subsection" aria-labelledby="documents-heading">
-              <h3 id="documents-heading">Documents</h3>
-              <ul id="documents-list" class="resource-list"></ul>
-            </section>
-
-            <section class="subsection" aria-labelledby="profiles-heading">
-              <h3 id="profiles-heading">Profiles</h3>
-              <ul id="links-list" class="resource-list"></ul>
-            </section>
-          </section>
-        </aside>
+        <section class="section" aria-labelledby="links-heading">
+          <div class="section-heading">
+            <p class="section-kicker">Links</p>
+            <h2 id="links-heading">Links</h2>
+          </div>
+          <ul id="links-list" class="links-list"></ul>
+        </section>
       </main>
     </div>
 
