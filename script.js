@@ -50,28 +50,28 @@ const siteContent = {
         description:
           "An essay exploring how the evolution of the electric grid is increasingly driven by software, coordination, and system adaptability rather than physical infrastructure alone.",
         href: "https://hughrscott.substack.com/p/the-grid-transition-is-not-a-hardware",
-        meta: "https://hughrscott.substack.com/p/the-grid-transition-is-not-a-hardware"
+        image: "https://substack-post-media.s3.amazonaws.com/public/images/d76c7c5e-6e0b-4eb4-8f13-1cb4f86f0dff_931x524.jpeg"
       },
       {
         title: "Why do Batteries Need Software",
         description:
           "An explanation of what battery control software is, what it does, and why it's necessary",
         href: "https://hughrscott.substack.com/p/why-do-batteries-need-software",
-        meta: "https://hughrscott.substack.com/p/why-do-batteries-need-software"
+        image: "https://substack-post-media.s3.amazonaws.com/public/images/d906d1ce-6c6b-4a76-9480-287241d43746_1279x720.png"
       },
       {
         title: "Does Anyone Need Artisinal Hand Crafter Code",
         description:
           "Why the move to agentic software is inevitable",
         href: "https://hughrscott.substack.com/p/does-anyone-need-artisanal-hand-crafted",
-        meta: "https://hughrscott.substack.com/p/does-anyone-need-artisanal-hand-crafted"
+        image: "https://substack-post-media.s3.amazonaws.com/public/images/6dc3abaa-ff64-4849-aa94-f622a4d61b43_1280x719.jpeg"
       },
       {
         title: "The Most Important Metric in a Battery is an Estimate",
         description:
           "Battery operators rely on knowing the state of charge accurately. Did you know it was an estimate?",
         href: "https://hughrscott.substack.com/p/the-most-important-metric-in-a-battery",
-        meta: "https://hughrscott.substack.com/p/the-most-important-metric-in-a-battery"
+        image: "https://substack-post-media.s3.amazonaws.com/public/images/3ff01938-02ee-462d-97c8-4807af055ff5_1279x720.png"
       }
     ]
   },
@@ -168,6 +168,22 @@ function renderWriting(writing) {
       const card = document.createElement("article");
       card.className = "writing-card";
 
+      if (article.image) {
+        const imgLink = document.createElement(article.href ? "a" : "div");
+        imgLink.className = "writing-image-link";
+        if (article.href) {
+          imgLink.href = article.href;
+          imgLink.target = "_blank";
+          imgLink.rel = "noreferrer";
+        }
+        const img = document.createElement("img");
+        img.className = "writing-image";
+        img.src = article.image;
+        img.alt = article.title;
+        imgLink.appendChild(img);
+        card.appendChild(imgLink);
+      }
+
       const title = document.createElement(article.href ? "a" : "h3");
       title.className = "writing-title";
       title.textContent = article.title;
@@ -182,17 +198,7 @@ function renderWriting(writing) {
       description.className = "writing-description";
       description.textContent = article.description;
 
-      const meta = document.createElement(article.href ? "a" : "p");
-      meta.className = "writing-meta";
-      meta.textContent = article.meta;
-
-      if (article.href) {
-        meta.href = article.href;
-        meta.target = "_blank";
-        meta.rel = "noreferrer";
-      }
-
-      card.append(title, description, meta);
+      card.append(title, description);
       return card;
     })
   );

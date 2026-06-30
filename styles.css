@@ -100,8 +100,7 @@ h2 {
 .experience-description,
 .bullet-list li,
 .links-list a,
-.writing-description,
-.writing-meta {
+.writing-description {
   font-size: 1.05rem;
   line-height: 1.72;
   color: var(--text-muted);
@@ -168,10 +167,20 @@ h2 {
 
 .writing-card {
   min-height: 100%;
-  padding: 1.3rem 1.35rem;
   border: 1px solid var(--border);
   border-radius: 16px;
   background: var(--surface);
+  overflow: hidden;
+}
+
+.writing-image-link {
+  display: block;
+}
+
+.writing-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .writing-card:hover {
@@ -180,6 +189,7 @@ h2 {
 
 .writing-title {
   display: inline-block;
+  padding: 1.3rem 1.35rem 0;
   font-size: 1.18rem;
   font-weight: 600;
   line-height: 1.35;
@@ -188,7 +198,6 @@ h2 {
 }
 
 .writing-title[href]:hover,
-.writing-meta[href]:hover,
 .links-list a:hover,
 .section-link a:hover {
   color: var(--accent);
@@ -198,11 +207,7 @@ h2 {
 
 .writing-description {
   margin-top: 0.75rem;
-}
-
-.writing-meta {
-  display: inline-block;
-  margin-top: 0.95rem;
+  padding: 0 1.35rem 1.3rem;
 }
 
 .bullet-list,
