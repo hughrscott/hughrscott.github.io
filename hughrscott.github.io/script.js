@@ -49,15 +49,29 @@ const siteContent = {
         title: "The Grid Transition Is Not a Hardware Problem",
         description:
           "An essay exploring how the evolution of the electric grid is increasingly driven by software, coordination, and system adaptability rather than physical infrastructure alone.",
-        href: null,
-        meta: "Article link can be added when available."
+        href: "https://hughrscott.substack.com/p/the-grid-transition-is-not-a-hardware",
+        meta: "https://hughrscott.substack.com/p/the-grid-transition-is-not-a-hardware"
       },
       {
-        title: "More essays forthcoming",
+        title: "Why do Batteries Need Software",
         description:
-          "This section is designed to grow into a small, durable body of writing on infrastructure, software, and applied intelligence.",
-        href: "https://hughrscott.substack.com",
-        meta: "Visit Substack"
+          "An explanation of what battery control software is, what it does, and why it's necessary",
+        href: "https://hughrscott.substack.com/p/why-do-batteries-need-software",
+        meta: "https://hughrscott.substack.com/p/why-do-batteries-need-software"
+      },
+      {
+        title: "Does Anyone Need Artisinal Hand Crafter Code",
+        description:
+          "Why the move to agentic software is inevitable",
+        href: "https://hughrscott.substack.com/p/does-anyone-need-artisanal-hand-crafted",
+        meta: "https://hughrscott.substack.com/p/does-anyone-need-artisanal-hand-crafted"
+      },
+      {
+        title: "The Most Important Metric in a Battery is an Estimate",
+        description:
+          "Battery operators rely on knowing the state of charge accurately. Did you know it was an estimate?",
+        href: "https://hughrscott.substack.com/p/the-most-important-metric-in-a-battery",
+        meta: "https://hughrscott.substack.com/p/the-most-important-metric-in-a-battery"
       }
     ]
   },
