@@ -3,11 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hugh Scott</title>
+    <title>Hugh Scott — CTO, AI &amp; Critical Infrastructure</title>
     <meta
       name="description"
       content="Hugh Scott is a technology strategist and operator working at the intersection of AI, software, and critical infrastructure."
     />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hugh Scott — CTO, AI & Critical Infrastructure" />
+    <meta property="og:description" content="Hugh Scott is a technology strategist and operator working at the intersection of AI, software, and critical infrastructure." />
+    <meta property="og:image" content="https://hughrscott.com/assets/images/HughPortrait.jpeg" />
+    <meta property="og:url" content="https://hughrscott.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hugh Scott" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hugh Scott — CTO, AI & Critical Infrastructure" />
+    <meta name="twitter:description" content="Hugh Scott is a technology strategist and operator working at the intersection of AI, software, and critical infrastructure." />
+    <meta name="twitter:image" content="https://hughrscott.com/assets/images/HughPortrait.jpeg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://hughrscott.com" />
+
+    <!-- JSON-LD Person Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Hugh Scott",
+      "jobTitle": "CTO",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "FlexGen"
+      },
+      "url": "https://hughrscott.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/hughscott/",
+        "https://github.com/hughrscott",
+        "https://hughrscott.substack.com/"
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -44,6 +83,7 @@
             <h2 id="writing-heading">Writing</h2>
           </div>
           <div id="writing-body" class="prose"></div>
+          <p class="section-link" id="writing-subscribe"></p>
           <div id="writing-list" class="writing-grid"></div>
         </section>
 
@@ -69,6 +109,15 @@
           <ul id="links-list" class="links-list"></ul>
         </section>
       </main>
+
+      <footer class="site-footer">
+        <p class="footer-copy">© Hugh Scott · Last updated July 2026</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="https://www.linkedin.com/in/hughscott/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/hughrscott" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://hughrscott.substack.com/" target="_blank" rel="noreferrer">Substack</a>
+        </nav>
+      </footer>
     </div>
 
     <script src="./script.js"></script>

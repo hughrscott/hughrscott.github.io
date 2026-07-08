@@ -25,7 +25,7 @@ const siteContent = {
     },
     {
       company: "Together Solar",
-      role: "Founder",
+      role: "Partner",
       description:
         "Helped launch and build a solar energy company focused on distributed energy solutions."
     },
@@ -44,6 +44,10 @@ const siteContent = {
     intro: [
       "I occasionally write about the evolution of energy infrastructure, software systems, and artificial intelligence."
     ],
+    subscribe: {
+      label: "Subscribe on Substack",
+      href: "https://hughrscott.substack.com/"
+    },
     articles: [
       {
         title: "The Grid Transition Is Not a Hardware Problem",
@@ -53,14 +57,14 @@ const siteContent = {
         image: "https://substack-post-media.s3.amazonaws.com/public/images/d76c7c5e-6e0b-4eb4-8f13-1cb4f86f0dff_931x524.jpeg"
       },
       {
-        title: "Why do Batteries Need Software",
+        title: "Why Batteries Need Software",
         description:
           "An explanation of what battery control software is, what it does, and why it's necessary",
         href: "https://hughrscott.substack.com/p/why-do-batteries-need-software",
         image: "https://substack-post-media.s3.amazonaws.com/public/images/d906d1ce-6c6b-4a76-9480-287241d43746_1279x720.png"
       },
       {
-        title: "Does Anyone Need Artisinal Hand Crafter Code",
+        title: "Does Anyone Need Artisanal Hand-Crafted Code",
         description:
           "Why the move to agentic software is inevitable",
         href: "https://hughrscott.substack.com/p/does-anyone-need-artisanal-hand-crafted",
@@ -72,6 +76,18 @@ const siteContent = {
           "Battery operators rely on knowing the state of charge accurately. Did you know it was an estimate?",
         href: "https://hughrscott.substack.com/p/the-most-important-metric-in-a-battery",
         image: "https://substack-post-media.s3.amazonaws.com/public/images/3ff01938-02ee-462d-97c8-4807af055ff5_1279x720.png"
+      },
+      {
+        title: "Golden Age of AI",
+        description:
+          "Reflections on living through a transformative era in artificial intelligence and what it means for the future of technology and society.",
+        href: "https://hughrscott.substack.com/p/golden-age-of-ai"
+      },
+      {
+        title: "Prompting IS Coding",
+        description:
+          "Why prompting large language models is a new form of programming — and what that means for software development, engineering culture, and the future of building products.",
+        href: "https://hughrscott.substack.com/p/prompting-is-coding"
       }
     ]
   },
@@ -99,6 +115,14 @@ const siteContent = {
     {
       label: "GitHub",
       href: "https://github.com/hughrscott"
+    },
+    {
+      label: "Email",
+      href: "mailto:hughrscott@mac.com"
+    },
+    {
+      label: "Substack",
+      href: "https://hughrscott.substack.com/"
     }
   ]
 };
@@ -161,6 +185,18 @@ function renderSectionLink(elementId, item) {
 
 function renderWriting(writing) {
   renderParagraphs("writing-body", writing.intro);
+
+  if (writing.subscribe) {
+    const subWrapper = document.getElementById("writing-subscribe");
+    if (subWrapper) {
+      const link = document.createElement("a");
+      link.href = writing.subscribe.href;
+      link.textContent = writing.subscribe.label;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      subWrapper.replaceChildren(link);
+    }
+  }
 
   const container = document.getElementById("writing-list");
   container.replaceChildren(
