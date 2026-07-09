@@ -118,7 +118,7 @@ const siteContent = {
     },
     {
       label: "Email",
-      href: "mailto:hughrscott@mac.com"
+      href: "mailto:contact@hughrscott.com"
     },
     {
       label: "Substack",
