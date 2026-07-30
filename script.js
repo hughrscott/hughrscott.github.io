@@ -95,8 +95,27 @@ const siteContent = {
   ],
   projects: {
     body: [
-      "I maintain a small public lab of technical experiments exploring complex systems including energy infrastructure, reinforcement learning, signal processing, and applied AI."
+      "I use small, public projects to investigate questions that interest me and to test what can be built with emerging tools."
     ],
+    feature: {
+      kicker: "Featured project",
+      title: "Face Forward",
+      description:
+        "A parking-lot question became an observed study, a public-information campaign, and an experiment in building with AI while keeping human judgment in charge.",
+      image: "./assets/images/faceforward-parking-sign.webp",
+      imageAlt:
+        "Face Forward Only parking sign with nose-in cars",
+      links: [
+        {
+          label: "Visit parkfaceforward.org",
+          href: "https://parkfaceforward.org/"
+        },
+        {
+          label: "Read why I built it",
+          href: "./face-forward.html"
+        }
+      ]
+    },
     github: {
       label: "Explore the GitHub lab",
       href: "https://github.com/hughrscott"
@@ -248,6 +267,55 @@ function renderBulletList(elementId, items) {
 
 function renderProjects(projects) {
   renderParagraphs("projects-body", projects.body);
+
+  const container = document.getElementById("projects-list");
+  const feature = projects.feature;
+  const card = document.createElement("article");
+  card.className = "project-card";
+
+  const imageLink = document.createElement("a");
+  imageLink.className = "project-image-link";
+  imageLink.href = feature.links[0].href;
+  imageLink.target = "_blank";
+  imageLink.rel = "noreferrer";
+
+  const image = document.createElement("img");
+  image.className = "project-image";
+  image.src = feature.image;
+  image.alt = feature.imageAlt;
+  imageLink.appendChild(image);
+
+  const content = document.createElement("div");
+  content.className = "project-content";
+
+  const kicker = document.createElement("p");
+  kicker.className = "project-kicker";
+  kicker.textContent = feature.kicker;
+
+  const title = document.createElement("h3");
+  title.className = "project-title";
+  title.textContent = feature.title;
+
+  const description = document.createElement("p");
+  description.className = "project-description";
+  description.textContent = feature.description;
+
+  const actions = document.createElement("div");
+  actions.className = "project-actions";
+  feature.links.forEach((item) => {
+    const link = document.createElement("a");
+    link.href = item.href;
+    link.textContent = item.label;
+    if (/^https?:\/\//.test(item.href)) {
+      link.target = "_blank";
+      link.rel = "noreferrer";
+    }
+    actions.appendChild(link);
+  });
+
+  content.append(kicker, title, description, actions);
+  card.append(imageLink, content);
+  container.replaceChildren(card);
 
   const wrapper = document.getElementById("projects-link");
   const link = document.createElement("a");

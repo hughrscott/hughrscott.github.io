@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why I Built Face Forward — Hugh Scott</title>
+    <meta
+      name="description"
+      content="How a question in an airport parking garage became Face Forward: an observed parking study, a public website, and an experiment in building with AI."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <meta property="og:title" content="Why I Built Face Forward — Hugh Scott" />
+    <meta
+      property="og:description"
+      content="How a question in an airport parking garage became an observed study, a public website, and an experiment in building with AI."
+    />
+    <meta
+      property="og:image"
+      content="https://parkfaceforward.org/assets/research/dlp-headline-card.png"
+    />
+    <meta property="og:url" content="https://hughrscott.com/face-forward.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Hugh Scott" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Why I Built Face Forward — Hugh Scott" />
+    <meta
+      name="twitter:description"
+      content="How a question in an airport parking garage became an observed study, a public website, and an experiment in building with AI."
+    />
+    <meta
+      name="twitter:image"
+      content="https://parkfaceforward.org/assets/research/dlp-headline-card.png"
+    />
+
+    <link rel="canonical" href="https://hughrscott.com/face-forward.html" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Why I Built Face Forward",
+      "description": "How a question in an airport parking garage became Face Forward: an observed parking study, a public website, and an experiment in building with AI.",
+      "author": {
+        "@type": "Person",
+        "name": "Hugh Scott",
+        "url": "https://hughrscott.com"
+      },
+      "mainEntityOfPage": "https://hughrscott.com/face-forward.html",
+      "image": "https://parkfaceforward.org/assets/research/dlp-headline-card.png"
+    }
+    </script>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="site-shell">
+      <main class="article-main">
+        <p class="back-link"><a href="./index.html#projects-heading">← Back to Hugh Scott</a></p>
+
+        <header class="article-header">
+          <div class="article-hero-copy">
+            <p class="article-kicker">Case study · Face Forward</p>
+            <h1>Why I Built Face Forward</h1>
+            <p class="article-lede">
+              What began as an irritation in an airport parking garage became a measured result, a public website, and an experiment in building with AI.
+            </p>
+          </div>
+          <figure class="article-hero-image">
+            <img
+              src="./assets/images/faceforward-parking-sign.webp"
+              alt="Face Forward Only parking sign with four cars parked nose-in"
+              width="1200"
+              height="1800"
+              fetchpriority="high"
+            />
+          </figure>
+        </header>
+
+        <article class="article-body">
+          <p>
+            About a year ago, I was driving around the parking garage at George Bush Intercontinental Airport looking for a space. The only ones I could find were between enormous pickup trucks, all of which had backed in.
+          </p>
+
+          <p>
+            I squeezed into one and parked. Then I realized that when the driver of the truck to my left returned, he would probably ding my door trying to climb into his cab. If only he had driven forward into the space.
+          </p>
+
+          <p>
+            On the walk to the elevator, I noticed how many other cars and trucks had backed in. It looked like perhaps a third of them. Why?
+          </p>
+
+          <p>
+            After that, I started seeing it everywhere. Every parking lot seemed to have vehicles backed into their spaces. I even saw people reversing into angled spaces designed to be entered nose-in. To do that, they had to approach from the wrong direction or leave facing against the intended flow of traffic.
+          </p>
+
+          <p>What was happening? Why was everyone backing in?</p>
+
+          <p>I started asking people. I got several versions of the same answer.</p>
+
+          <p>“It’s faster.”</p>
+
+          <p>“It’s safer.”</p>
+
+          <p>“It’s easier.”</p>
+
+          <p>
+            None of those answers made much sense to me. I had backed into spaces myself, and it had never felt faster or easier. Safety was a different and more complicated question, but the people I asked were not citing evidence. The answers sounded inherited rather than examined.
+          </p>
+
+          <p>
+            Then I had an idea. What if I created a public-information website that laid out the evidence and let people decide for themselves?
+          </p>
+
+          <p>
+            That was the beginning of <a href="https://parkfaceforward.org/">Face Forward</a>.
+          </p>
+
+          <p>
+            I registered <a href="https://parkfaceforward.org/">parkfaceforward.org</a> and started working with several AI tools. I used one for graphic design, another to help develop and test the parking-event detector, and another to build the website. I made the decisions, including when the models were too confident, too cautious, or simply wrong.
+          </p>
+
+          <p>The first version of the website appeared within a couple of days. The evidence took longer.</p>
+
+          <p>
+            I did it because I could. I also wanted to make something useful with tools that had suddenly become available to almost anyone. Mostly, I wanted to find out whether the claim was true.
+          </p>
+
+          <p>
+            UC Berkeley had published the <a href="https://doi.org/10.5061/dryad.tht76hf5b">Dragon Lake Parking Dataset</a>, created from 3.5 hours of drone footage above a large parking lot. It included detailed vehicle trajectories across 30 recordings. With help from AI, I built a deterministic system to identify parking and unparking events, classify whether vehicles entered nose-in or in reverse, and measure the duration of each maneuver.
+          </p>
+
+          <p>
+            Before looking at the overall comparison, we established validation targets for the detector. It met some and missed others. Broad weighted precision was 92.2% against a target of 95%. Median timing-boundary error was 0.56 seconds against a target below 0.50 seconds.
+          </p>
+
+          <p>
+            The model initially treated that as a simple failure. I disagreed, but I did not change the targets or pretend that it had passed. We reported the misses. We also reported that recall was 100%, method classification was 95.5% accurate, and the held-out precision within the complete-event group actually used for the timing analysis was 98%.
+          </p>
+
+          <p>That left us with 548 complete parking and unparking events.</p>
+
+          <p>
+            The result was surprisingly clear. Forward-entry, nose-in parking averaged 36.2 seconds across entry and exit. Reverse-entry, nose-out parking averaged 46.2 seconds.
+          </p>
+
+          <p><strong>Ten seconds slower overall.</strong></p>
+
+          <p>
+            Backing in did produce a faster departure. Drivers saved 11.2 seconds when they later drove forward out of the space. But they had spent 21.2 additional seconds backing in. The faster exit did not recover the slower entry.
+          </p>
+
+          <p>
+            We tested the result several different ways, including trimming extreme observations, resampling by recording, and deliberately making assumptions that worked against nose-in parking. The size of the advantage changed, but its direction survived the reasonable tests.
+          </p>
+
+          <p>
+            This study cannot tell us that nose-in parking is always faster. It did not measure safety, visibility, courtesy, difficulty, or every kind of parking lot. What it can tell us is that in these 548 observed events, backing in was not the faster overall choice.
+          </p>
+
+          <p>
+            I started with an irritation in an airport parking garage. I ended with a measured result, a public website, and a campaign willing to show its work.
+          </p>
+
+          <p>That became Face Forward.</p>
+
+          <aside class="article-endnote">
+            <p>
+              Explore <a href="https://parkfaceforward.org/">Face Forward</a>, read the <a href="https://parkfaceforward.org/research/">full evidence and methodology</a>, or inspect the <a href="https://github.com/hughrscott/face-forward">analysis source on GitHub</a>.
+            </p>
+          </aside>
+        </article>
+      </main>
+
+      <footer class="site-footer">
+        <p class="footer-copy">© Hugh Scott · Last updated July 2026</p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="./index.html">Home</a>
+          <a href="https://parkfaceforward.org/">Face Forward</a>
+          <a href="https://www.linkedin.com/in/hughscott/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>
