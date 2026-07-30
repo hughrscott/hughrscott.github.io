@@ -83,12 +83,6 @@ const siteContent = {
           "Reflections on living through a transformative era in artificial intelligence and what it means for the future of technology and society.",
         href: "https://hughrscott.substack.com/p/the-golden-age-of-ai",
         image: "https://substack-post-media.s3.amazonaws.com/public/images/4fb5db38-5147-48c7-8b55-47e1fb1f3178_1408x768.png"
-      },
-      {
-        title: "Prompting IS Coding",
-        description:
-          "Why prompting large language models is a new form of programming — and what that means for software development, engineering culture, and the future of building products.",
-        href: "https://hughrscott.substack.com/p/prompting-is-coding"
       }
     ]
   },
