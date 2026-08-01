@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hugh Scott — CTO, AI &amp; Critical Infrastructure</title>
+    <title>Hugh Scott — AI, Software &amp; the Energy Transition</title>
     <meta
       name="description"
-      content="Hugh Scott is a technology strategist and operator working at the intersection of AI, software, and critical infrastructure."
+      content="Hugh Scott is a technology strategist, operator, and builder working at the intersection of AI, software, and the energy transition."
     />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Hugh Scott — CTO, AI & Critical Infrastructure" />
-    <meta property="og:description" content="Hugh Scott is a technology strategist and operator working at the intersection of AI, software, and critical infrastructure." />
+    <meta property="og:title" content="Hugh Scott — AI, Software &amp; the Energy Transition" />
+    <meta property="og:description" content="Hugh Scott is a technology strategist, operator, and builder working at the intersection of AI, software, and the energy transition." />
     <meta property="og:image" content="https://hughrscott.com/assets/images/HughPortrait.jpeg" />
     <meta property="og:url" content="https://hughrscott.com" />
     <meta property="og:type" content="website" />
@@ -20,8 +20,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Hugh Scott — CTO, AI & Critical Infrastructure" />
-    <meta name="twitter:description" content="Hugh Scott is a technology strategist and operator working at the intersection of AI, software, and critical infrastructure." />
+    <meta name="twitter:title" content="Hugh Scott — AI, Software &amp; the Energy Transition" />
+    <meta name="twitter:description" content="Hugh Scott is a technology strategist, operator, and builder working at the intersection of AI, software, and the energy transition." />
     <meta name="twitter:image" content="https://hughrscott.com/assets/images/HughPortrait.jpeg" />
 
     <!-- Canonical -->
@@ -50,16 +50,19 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="site-shell">
-      <main class="site-main">
+      <main id="main-content" class="site-main">
         <section class="hero" aria-labelledby="name">
           <div class="hero-copy">
-            <h1 id="name"></h1>
-            <p class="hero-headline" id="title"></p>
-            <div id="hero-body" class="prose"></div>
+            <h1 id="name">Hugh Scott</h1>
+            <p class="hero-headline" id="title">Technology strategist, operator, and builder working at the intersection of AI, software, and the energy transition.</p>
+            <div id="hero-body" class="prose">
+              <p>I work at the intersection of software, energy systems, and intelligent infrastructure.</p>
+            </div>
           </div>
           <figure class="hero-image">
-            <img id="portrait" alt="" />
+            <img id="portrait" src="./assets/images/HughPortrait.jpeg" alt="Portrait of Hugh Scott" width="800" height="1000" fetchpriority="high" />
           </figure>
         </section>
 
@@ -67,23 +70,29 @@
           <div class="section-heading">
             <h2 id="about-heading">About</h2>
           </div>
-          <div id="about-body" class="prose"></div>
+          <div id="about-body" class="prose">
+            <p>My work has consistently centered on one theme: helping organizations turn complex technology into clear strategy, executable systems, and commercial value.</p>
+          </div>
         </section>
 
         <section class="section" aria-labelledby="experience-heading">
           <div class="section-heading">
             <h2 id="experience-heading">Selected Experience</h2>
           </div>
-          <div id="experience-list" class="experience-list"></div>
-          <p class="section-link" id="experience-link"></p>
+          <div id="experience-list" class="experience-list">
+            <article class="experience-item"><h3 class="experience-heading"><a href="https://www.flexgen.com/about">FlexGen</a> — Chief Technology Officer</h3></article>
+          </div>
+          <p class="section-link" id="experience-link"><a href="./resume.html">View full resume</a></p>
         </section>
 
         <section class="section" aria-labelledby="writing-heading">
           <div class="section-heading">
             <h2 id="writing-heading">Writing</h2>
           </div>
-          <div id="writing-body" class="prose"></div>
-          <p class="section-link" id="writing-subscribe"></p>
+          <div id="writing-body" class="prose">
+            <p>I occasionally write about the evolution of energy infrastructure, software systems, and artificial intelligence.</p>
+          </div>
+          <p class="section-link" id="writing-subscribe"><a href="https://hughrscott.substack.com/">Subscribe on Substack</a></p>
           <div id="writing-list" class="writing-grid"></div>
         </section>
 
@@ -91,7 +100,9 @@
           <div class="section-heading">
             <h2 id="interests-heading">Current Interests</h2>
           </div>
-          <ul id="interests-list" class="bullet-list"></ul>
+          <div id="interests-body" class="prose">
+            <p>I am interested in how AI and software will coordinate the energy transition: from batteries and grid operations to the systems connecting energy, compute, and communications.</p>
+          </div>
         </section>
 
         <section class="section" aria-labelledby="projects-heading">

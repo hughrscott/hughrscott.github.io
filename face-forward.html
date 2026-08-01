@@ -55,8 +55,9 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="site-shell">
-      <main class="article-main">
+      <main id="main-content" class="article-main">
         <p class="back-link"><a href="./index.html#projects-heading">← Back to Hugh Scott</a></p>
 
         <header class="article-header">
@@ -66,6 +67,7 @@
             <p class="article-lede">
               What began as an irritation in an airport parking garage became a measured result, a public website, and an experiment in building with AI.
             </p>
+            <p class="article-reading-time">4 min read</p>
           </div>
           <figure class="article-hero-image">
             <img
@@ -79,6 +81,7 @@
         </header>
 
         <article class="article-body">
+          <h2>The Question</h2>
           <p>
             About a year ago, I was driving around the parking garage at George Bush Intercontinental Airport looking for a space. The only ones I could find were between enormous pickup trucks, all of which had backed in.
           </p>
@@ -109,6 +112,7 @@
             None of those answers made much sense to me. I had backed into spaces myself, and it had never felt faster or easier. Safety was a different and more complicated question, but the people I asked were not citing evidence. The answers sounded inherited rather than examined.
           </p>
 
+          <h2>The Experiment</h2>
           <p>
             Then I had an idea. What if I created a public-information website that laid out the evidence and let people decide for themselves?
           </p>
@@ -127,6 +131,7 @@
             I did it because I could. I also wanted to make something useful with tools that had suddenly become available to almost anyone. Mostly, I wanted to find out whether the claim was true.
           </p>
 
+          <h2>The Data</h2>
           <p>
             UC Berkeley had published the <a href="https://doi.org/10.5061/dryad.tht76hf5b">Dragon Lake Parking Dataset</a>, created from 3.5 hours of drone footage above a large parking lot. It included detailed vehicle trajectories across 30 recordings. With help from AI, I built a deterministic system to identify parking and unparking events, classify whether vehicles entered nose-in or in reverse, and measure the duration of each maneuver.
           </p>
@@ -141,6 +146,7 @@
 
           <p>That left us with 548 complete parking and unparking events.</p>
 
+          <h2>The Result</h2>
           <p>
             The result was surprisingly clear. Forward-entry, nose-in parking averaged 36.2 seconds across entry and exit. Reverse-entry, nose-out parking averaged 46.2 seconds.
           </p>
@@ -155,6 +161,7 @@
             We tested the result several different ways, including trimming extreme observations, resampling by recording, and deliberately making assumptions that worked against nose-in parking. The size of the advantage changed, but its direction survived the reasonable tests.
           </p>
 
+          <h2>What It Does—and Does Not—Prove</h2>
           <p>
             This study cannot tell us that nose-in parking is always faster. It did not measure safety, visibility, courtesy, difficulty, or every kind of parking lot. What it can tell us is that in these 548 observed events, backing in was not the faster overall choice.
           </p>

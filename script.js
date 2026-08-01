@@ -2,7 +2,7 @@ const siteContent = {
   profile: {
     displayName: "Hugh Scott",
     heading:
-      "Technology strategist, operator, and builder focused on AI and critical infrastructure.",
+      "Technology strategist, operator, and builder working at the intersection of AI, software, and the energy transition.",
     intro: [
       "I work at the intersection of software, energy systems, and intelligent infrastructure. Over the course of my career I have helped turn complex technical systems into commercial products, build new technology strategies, and lead teams through periods of growth and transition.",
       "Today I am particularly interested in how artificial intelligence will reshape physical infrastructure and the software systems that coordinate it."
@@ -19,9 +19,9 @@ const siteContent = {
   experience: [
     {
       company: "FlexGen",
+      companyHref: "https://www.flexgen.com/about",
       role: "Chief Technology Officer",
-      description:
-        "Led technology strategy for a grid-scale battery software platform. Helped shape HybridOS into a differentiated commercial product while advancing analytics, software architecture, and AI-driven operational capabilities."
+      description: ""
     },
     {
       company: "Together Solar",
@@ -87,11 +87,7 @@ const siteContent = {
     ]
   },
   interests: [
-    "AI and the future of critical infrastructure",
-    "The software-defined electric grid",
-    "Battery systems and energy storage economics",
-    "Reinforcement learning and control systems",
-    "The convergence of energy, compute, and communications networks"
+    "I am interested in how AI and software will coordinate the energy transition: from batteries and grid operations to the systems connecting energy, compute, and communications."
   ],
   projects: {
     body: [
@@ -171,13 +167,24 @@ function renderExperience(items) {
 
       const heading = document.createElement("h3");
       heading.className = "experience-heading";
-      heading.textContent = `${item.company} — ${item.role}`;
+      if (item.companyHref) {
+        const companyLink = document.createElement("a");
+        companyLink.href = item.companyHref;
+        companyLink.target = "_blank";
+        companyLink.rel = "noopener";
+        companyLink.textContent = item.company;
+        heading.append(companyLink, ` — ${item.role}`);
+      } else {
+        heading.textContent = `${item.company} — ${item.role}`;
+      }
 
-      const description = document.createElement("p");
-      description.className = "experience-description";
-      description.textContent = item.description;
-
-      article.append(heading, description);
+      article.append(heading);
+      if (item.description) {
+        const description = document.createElement("p");
+        description.className = "experience-description";
+        description.textContent = item.description;
+        article.append(description);
+      }
       return article;
     })
   );
@@ -215,34 +222,30 @@ function renderWriting(writing) {
   const container = document.getElementById("writing-list");
   container.replaceChildren(
     ...writing.articles.map((article) => {
-      const card = document.createElement("article");
+      const card = document.createElement("a");
       card.className = "writing-card";
+      card.href = article.href;
+      card.target = "_blank";
+      card.rel = "noopener";
 
       if (article.image) {
-        const imgLink = document.createElement(article.href ? "a" : "div");
-        imgLink.className = "writing-image-link";
-        if (article.href) {
-          imgLink.href = article.href;
-          imgLink.target = "_blank";
-          imgLink.rel = "noreferrer";
-        }
+        const imageWrapper = document.createElement("div");
+        imageWrapper.className = "writing-image-link";
         const img = document.createElement("img");
         img.className = "writing-image";
         img.src = article.image;
-        img.alt = article.title;
-        imgLink.appendChild(img);
-        card.appendChild(imgLink);
+        img.alt = "";
+        img.width = 16;
+        img.height = 9;
+        img.loading = "lazy";
+        img.decoding = "async";
+        imageWrapper.appendChild(img);
+        card.appendChild(imageWrapper);
       }
 
-      const title = document.createElement(article.href ? "a" : "h3");
+      const title = document.createElement("h3");
       title.className = "writing-title";
       title.textContent = article.title;
-
-      if (article.href) {
-        title.href = article.href;
-        title.target = "_blank";
-        title.rel = "noreferrer";
-      }
 
       const description = document.createElement("p");
       description.className = "writing-description";
@@ -283,6 +286,10 @@ function renderProjects(projects) {
   image.className = "project-image";
   image.src = feature.image;
   image.alt = feature.imageAlt;
+  image.width = 1200;
+  image.height = 1800;
+  image.loading = "lazy";
+  image.decoding = "async";
   imageLink.appendChild(image);
 
   const content = document.createElement("div");
@@ -351,6 +358,6 @@ renderParagraphs("about-body", siteContent.about);
 renderExperience(siteContent.experience);
 renderSectionLink("experience-link", siteContent.experienceLink);
 renderWriting(siteContent.writing);
-renderBulletList("interests-list", siteContent.interests);
+renderParagraphs("interests-body", siteContent.interests);
 renderProjects(siteContent.projects);
 renderLinks(siteContent.links);
