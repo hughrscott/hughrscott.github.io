@@ -235,8 +235,8 @@ function renderWriting(writing) {
         img.className = "writing-image";
         img.src = article.image;
         img.alt = "";
-        img.width = 16;
-        img.height = 9;
+        img.width = 1280;
+        img.height = 720;
         img.loading = "lazy";
         img.decoding = "async";
         imageWrapper.appendChild(img);
