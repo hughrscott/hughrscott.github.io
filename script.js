@@ -86,18 +86,16 @@ const siteContent = {
       }
     ]
   },
-  interests: [
-    "I am interested in how AI and software will coordinate the energy transition: from batteries and grid operations to the systems connecting energy, compute, and communications."
-  ],
   projects: {
     body: [
-      "I use small, public projects to investigate questions that interest me and to test what can be built with emerging tools."
+      "A small question about parking became a public experiment in observation, data, and building with AI."
     ],
     feature: {
       kicker: "Featured project",
       title: "Face Forward",
       description:
         "A parking-lot question became an observed study, a public-information campaign, and an experiment in building with AI while keeping human judgment in charge.",
+      result: "Nose-in parking was about 10 seconds faster overall in 548 observed events.",
       image: "./assets/images/faceforward-parking-sign.webp",
       imageAlt:
         "Face Forward Only parking sign with nose-in cars",
@@ -307,6 +305,10 @@ function renderProjects(projects) {
   description.className = "project-description";
   description.textContent = feature.description;
 
+  const result = document.createElement("p");
+  result.className = "project-result";
+  result.textContent = feature.result;
+
   const actions = document.createElement("div");
   actions.className = "project-actions";
   feature.links.forEach((item) => {
@@ -320,7 +322,7 @@ function renderProjects(projects) {
     actions.appendChild(link);
   });
 
-  content.append(kicker, title, description, actions);
+  content.append(kicker, title, description, result, actions);
   card.append(imageLink, content);
   container.replaceChildren(card);
 
@@ -358,6 +360,5 @@ renderParagraphs("about-body", siteContent.about);
 renderExperience(siteContent.experience);
 renderSectionLink("experience-link", siteContent.experienceLink);
 renderWriting(siteContent.writing);
-renderParagraphs("interests-body", siteContent.interests);
 renderProjects(siteContent.projects);
 renderLinks(siteContent.links);
