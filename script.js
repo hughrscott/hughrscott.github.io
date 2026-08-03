@@ -2,10 +2,10 @@ const siteContent = {
   profile: {
     displayName: "Hugh Scott",
     heading:
-      "Technology strategist, operator, and builder working at the intersection of AI, software, and the energy transition.",
+      "Working on technology at the intersection of AI, software, and the energy transition.",
     intro: [
-      "I work at the intersection of software, energy systems, and intelligent infrastructure. Over the course of my career I have helped turn complex technical systems into commercial products, build new technology strategies, and lead teams through periods of growth and transition.",
-      "Today I am particularly interested in how artificial intelligence will reshape physical infrastructure and the software systems that coordinate it."
+      "Over the course of my career I have helped turn complex technical systems into commercial products, build new technology strategies, and lead teams through periods of growth and transition.",
+      "Today I am particularly interested in how artificial intelligence will reshape our infrastructure and the software systems that coordinate it."
     ],
     portrait: {
       src: "./assets/images/HughPortrait.jpeg",
