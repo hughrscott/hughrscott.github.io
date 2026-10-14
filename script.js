@@ -12,20 +12,17 @@ const siteContent = {
       alt: "Portrait of Hugh Scott"
     }
   },
-  about: [
-    "My work has consistently centered on one theme: helping organizations turn complex technology into clear strategy, executable systems, and commercial value.",
-    "I have worked across financial technology, renewable energy, and grid-scale battery software, often in situations where technology, product, and business strategy had to evolve together."
-  ],
+
   experience: [
     {
       company: "FlexGen",
       companyHref: "https://www.flexgen.com/about",
-      role: "Chief Technology Officer",
-      description: ""
+      role: "Chief Operating Officer",
+      description: "Leads operations across software, project delivery, and lifecycle services."
     },
     {
       company: "Together Solar",
-      role: "Partner",
+      role: "Founder",
       description:
         "Helped launch and build a solar energy company focused on distributed energy solutions."
     },
@@ -87,26 +84,21 @@ const siteContent = {
     ]
   },
   projects: {
-    body: [
-      "A small question about parking became a public experiment in observation, data, and building with AI."
-    ],
     feature: {
-      kicker: "Featured project",
-      title: "Face Forward",
       description:
-        "A parking-lot question became an observed study, a public-information campaign, and an experiment in building with AI while keeping human judgment in charge.",
-      result: "Nose-in parking was about 10 seconds faster overall in 548 observed events.",
+        "A question in an airport parking garage led me to test a familiar claim: is backing in actually faster? I used AI tools to build the analysis and publish the evidence—including where the detector missed its validation targets.",
+      result: "Across 548 observed parking and unparking events, nose-in parking averaged about 10 seconds less overall than reverse-entry.",
       image: "./assets/images/faceforward-parking-sign.webp",
       imageAlt:
         "Face Forward Only parking sign with nose-in cars",
       links: [
         {
-          label: "Visit parkfaceforward.org",
-          href: "https://parkfaceforward.org/"
-        },
-        {
           label: "Read why I built it",
           href: "./face-forward.html"
+        },
+        {
+          label: "Visit Face Forward",
+          href: "https://parkfaceforward.org/"
         }
       ]
     },
@@ -267,7 +259,6 @@ function renderBulletList(elementId, items) {
 }
 
 function renderProjects(projects) {
-  renderParagraphs("projects-body", projects.body);
 
   const container = document.getElementById("projects-list");
   const feature = projects.feature;
@@ -277,8 +268,7 @@ function renderProjects(projects) {
   const imageLink = document.createElement("a");
   imageLink.className = "project-image-link";
   imageLink.href = feature.links[0].href;
-  imageLink.target = "_blank";
-  imageLink.rel = "noreferrer";
+
 
   const image = document.createElement("img");
   image.className = "project-image";
@@ -293,13 +283,6 @@ function renderProjects(projects) {
   const content = document.createElement("div");
   content.className = "project-content";
 
-  const kicker = document.createElement("p");
-  kicker.className = "project-kicker";
-  kicker.textContent = feature.kicker;
-
-  const title = document.createElement("h3");
-  title.className = "project-title";
-  title.textContent = feature.title;
 
   const description = document.createElement("p");
   description.className = "project-description";
@@ -322,7 +305,7 @@ function renderProjects(projects) {
     actions.appendChild(link);
   });
 
-  content.append(kicker, title, description, result, actions);
+  content.append(description, result, actions);
   card.append(imageLink, content);
   container.replaceChildren(card);
 
@@ -356,7 +339,7 @@ function renderLinks(links) {
 }
 
 renderProfile(siteContent.profile);
-renderParagraphs("about-body", siteContent.about);
+
 renderExperience(siteContent.experience);
 renderSectionLink("experience-link", siteContent.experienceLink);
 renderWriting(siteContent.writing);
